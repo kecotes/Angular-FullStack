@@ -1,0 +1,10 @@
+{
+    "posts": [
+      { "id": 1, "title": "¿Como recuperar el pelo?", "author": "kevinwebtarai" }
+    ],
+    "comments": [
+      { "id": 1, "body": "Es enserio jajaja", "postId": 1 },
+      { "id": 2, "body": "Este es el mejor jajaj", "postId": 1 }
+    ],
+    "profile": { "name": "admin" }
+  }
