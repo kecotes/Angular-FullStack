@@ -1,4 +1,5 @@
 Está es la api que perfectamente puede ir en otra carpeta fuera del proyecto
+https://www.positronx.io/angular-httpclient-http-tutorial-build-consume-restful-api/
 
 Para ejecutar el proyecto de la API:
 json-server --watch db.json
