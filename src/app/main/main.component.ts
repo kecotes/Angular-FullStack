@@ -1,5 +1,5 @@
 import { Component, NgZone, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TeacherService } from '../services/teacher.service';
 
@@ -10,17 +10,7 @@ import { TeacherService } from '../services/teacher.service';
 })
 export class MainComponent implements OnInit {
 
-  teacherForm = this.fb.group({
-    id: [''],
-    name: [''],
-    secondName: [''],   
-    status: [''],
-    profession: [''],
-    typeContract: [''],
-    telephone: [''],
-    email: [''],
-    password: [''],   
-  });
+  teacherForm: FormGroup; 
 
   constructor(
     public fb: FormBuilder,
@@ -30,10 +20,21 @@ export class MainComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    
+    this.teacherForm = this.fb.group({
+      id: [''],
+      name: [''],
+      secondName: [''],   
+      status: [''],
+      profession: [''],
+      typeContract: [''],
+      telephone: [''],
+      email: [''],
+      password: [''],   
+    });
   }
 
   submitForm(){
+    console.log(this.teacherForm);
     this.teacher.createTeacher(this.teacherForm.value).subscribe((res) => {
       console.log('Teacher Added!');
       this.ngZone.run(() => this.router.navigateByUrl('/teacher-list'));
