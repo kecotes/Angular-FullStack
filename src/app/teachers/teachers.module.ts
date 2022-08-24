@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AddTeacherComponent } from './add-teacher/add-teacher.component';
 import { EditTeacherComponent } from './edit-teacher/edit-teacher.component';
 import { ListTeacherComponent } from './list-teacher/list-teacher.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +13,9 @@ import { ListTeacherComponent } from './list-teacher/list-teacher.component';
     ListTeacherComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     AddTeacherComponent,

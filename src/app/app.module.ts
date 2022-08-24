@@ -8,6 +8,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { CharacterComponent } from './character/character.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TeacherService } from './services/teacher.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [TeacherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
