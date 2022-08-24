@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { CharacterComponent } from './character/character.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TeacherService } from './services/teacher.service';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { TeacherService } from './services/teacher.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [TeacherService],
   bootstrap: [AppComponent]
