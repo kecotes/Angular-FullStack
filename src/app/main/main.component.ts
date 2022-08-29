@@ -10,7 +10,12 @@ import { TeacherService } from '../services/teacher.service';
 })
 export class MainComponent implements OnInit {
 
-  teacherForm: FormGroup; 
+  teacherForm: FormGroup;
+  IssueArr: any = [];
+
+  ngOnInit() {
+    this.addTeacher();
+  }
 
   constructor(
     public fb: FormBuilder,
@@ -19,7 +24,7 @@ export class MainComponent implements OnInit {
     private ngZone: NgZone 
   ) { }
 
-  ngOnInit(){
+  addTeacher(){
     this.teacherForm = this.fb.group({
       id: [''],
       name: [''],
@@ -37,7 +42,7 @@ export class MainComponent implements OnInit {
     console.log(this.teacherForm);
     this.teacher.createTeacher(this.teacherForm.value).subscribe((res) => {
       console.log('Teacher Added!');
-      this.ngZone.run(() => this.router.navigateByUrl('/teacher-list'));
+      this.ngZone.run(() => this.router.navigateByUrl('/main'));
     })
   }
 

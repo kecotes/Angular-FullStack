@@ -9,7 +9,7 @@ import { ListTeacherComponent } from './list-teacher/list-teacher.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'main'},
   { path: 'main', component: MainComponent },
-  { path: 'characters', component: ListTeacherComponent },
+  { path: 'list-teacher', component: ListTeacherComponent },
   { path: 'add-teacher', component: AddTeacherComponent },
   { path: 'edit-teacher/:id', component: EditTeacherComponent }
 ];

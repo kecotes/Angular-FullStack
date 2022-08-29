@@ -11,34 +11,15 @@ import { Teacher } from 'src/app/shared/teacher';
 })
 export class AddTeacherComponent implements OnInit {
 
-  teacherForm = this.fb.group({
-      id: [''],
-      name: [''],
-      secondName: [''],   
-      status: [''],
-      profession: [''],
-      typeContract: [''],
-      telephone: [''],
-      email: [''],
-      password: [''],   
-    });
+  teacherForm: FormGroup; 
 
   constructor( 
-    public fb: FormBuilder,
-    public teacher: TeacherService,
-    private router: Router,
-    private ngZone: NgZone 
   ) { }
 
   ngOnInit(){
-    
   }
 
   submitForm(){
-    this.teacher.createTeacher(this.teacherForm.value).subscribe((res) => {
-      console.log('Teacher Added!');
-      this.ngZone.run(() => this.router.navigateByUrl('/teacher-list'));
-    })
   }
 
 }

@@ -33,12 +33,19 @@ export class TeacherService {
       this.httpOptions
         ).pipe
           (retry(1), catchError(this.errorHandl));
-  } 
+  }
+  
+  // GET ID
+  getTeacher(id): Observable<Teacher> {
+    return this.http
+      .get<Teacher>(this.baseurl + '/teachertracking/' + id)
+      .pipe(retry(1), catchError(this.errorHandl));
+  }
 
   // GET
-  getTeacher(): Observable<Teacher> {
+  getTeachers(): Observable<Teacher> {
     return this.http.get<Teacher>(
-      this.baseurl + '/teachertraking/'
+      this.baseurl + '/teachertracking/'
         ).pipe(retry(1), catchError(this.errorHandl));
   }
 

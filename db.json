@@ -1,19 +1,58 @@
 {
-  "posts": [
+  "teachertracking": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "issue_name": "Table Improvement",
+      "issue_message": "Issue tracking is awesome because of collaboration",
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "issue_name": "Tooltip Issue",
+      "issue_message": "Issue tracking is awesome because of collaboration",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "1",
+      "secondName": "2",
+      "status": "6",
+      "profession": "7",
+      "typeContract": "8",
+      "telephone": "5",
+      "email": "3",
+      "password": "4"
+    },
+    {
+      "id": 4,
+      "name": "Kevin Eduardo",
+      "secondName": "Cotes Vega",
+      "status": "true",
+      "profession": "Ingeniero de Sistema",
+      "typeContract": "Obra Labor",
+      "telephone": "3016402853",
+      "email": "kevinwebtarai@hotmail.com",
+      "password": "revolution7"
+    },
+    {
+      "id": 5,
+      "name": "Julio",
+      "secondName": "Iglesias",
+      "status": "true",
+      "profession": "tecnico",
+      "typeContract": "practica",
+      "telephone": "30164558987",
+      "email": "julio@gmail.com",
+      "password": "julio123"
+    },
+    {
+      "id": 6,
+      "name": "Josue",
+      "secondName": "Malin",
+      "status": "true",
+      "profession": "Jobe",
+      "typeContract": "Yes",
+      "telephone": "3125983322",
+      "email": "core@gma.com",
+      "password": "rest1"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

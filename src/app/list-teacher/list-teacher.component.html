@@ -1,1 +1,37 @@
-<p>list-teacher works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="inner">
+                <h3>Instructores Sena</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">name</th>
+                            <th scope="col">secondName</th>
+                            <th scope="col">status</th>
+                            <th scope="col">profession</th>
+                            <th scope="col">typeContract</th>
+                            <th scope="col">telephone</th>
+                            <th scope="col">email</th>
+                            <th scope="col">Options</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let teacher of teacherList">
+                            <th scope="row">{{teacher.id}}</th>
+                            <td>{{teacher.name}}</td>
+                            <td>{{teacher.secondName}}</td>
+                            <td>{{teacher.status}}</td>
+                            <td>{{teacher.profession}}</td>
+                            <td>{{teacher.typeContract}}</td>
+                            <td>{{teacher.telephone}}</td>
+                            <td>{{teacher.email}}</td>
+                            <td type="button" class="btn text-bg-dark">Ver</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
